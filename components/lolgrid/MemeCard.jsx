@@ -12,17 +12,18 @@ export default function MemeCard({ meme }) {
           <span className="text-sm text-gray-400">• {meme.timeAgo}</span>
         </div>
       </div>
-      
+
       <div className="relative">
-        <Image 
-          src={meme.imageUrl} 
-          alt="Meme" 
-          width={600} 
+        <Image
+          src={`https://picsum.photos/600/400?random=${meme.id}`}
+          alt="Meme"
+          width={600}
           height={400}
           className="w-full h-auto"
+          unoptimized
         />
       </div>
-      
+
       <div className="p-3">
         <MemeVoting initialVotes={meme.votes} />
       </div>
